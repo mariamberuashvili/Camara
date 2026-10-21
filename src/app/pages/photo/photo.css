@@ -1,0 +1,78 @@
+.container {
+  width: 90%;
+  max-width: 520px;
+  padding: 22px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fff;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.camera-container {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  height: 350px;
+  margin: 40px auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #000;
+  background: #000;
+}
+
+video,
+.preview-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.btn-switch,
+.btn-snap,
+.btn-retry {
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 25px;
+  cursor: pointer;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.btn-switch:hover,
+.btn-snap:hover,
+.btn-retry:hover {
+  background: #333;
+}
+
+.form-data {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}

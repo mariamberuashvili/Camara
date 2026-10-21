@@ -1,0 +1,32 @@
+  <app-header></app-header>
+
+<div class="container">
+
+
+  <div class="camera-container">
+    <video #video autoplay playsinline [hidden]="fotoCapturada"></video>
+    <canvas #canvas style="display: none;"></canvas>
+
+    @if (fotoCapturada) {
+      <img [src]="fotoCapturada" class="preview-img" alt="Foto capturada">
+    }
+  </div>
+
+  <div class="button-group">
+    @if (!fotoCapturada) {
+      <button (click)="cambiarCamara()" class="btn-switch">
+        📷 {{ 'PHOTO_SWITCH_CAMERA' | translate }}
+      </button>
+    }
+  </div>
+
+  <div class="button-group">
+    @if (!fotoCapturada) {
+      <button (click)="capturarFoto()" class="btn-snap">{{ 'PHOTO_TAKE' | translate }}</button>
+    } @else {
+      <button (click)="reintentar()" class="btn-retry">{{ 'PHOTO_RETRY' | translate }}</button>
+    }
+  </div>
+<div class="button-group">
+  <button (click)="subirAlServidor()" class="btn-snap">{{ 'PHOTO_SEND' | translate }}</button>
+</div>

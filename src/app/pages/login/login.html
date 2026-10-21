@@ -1,0 +1,25 @@
+<app-header></app-header>
+
+<div class="container">
+  <h2>{{ 'LOGIN_TITLE' | translate }}</h2>
+
+  <form (ngSubmit)="submitLogin()" (keydown.enter)="submitLogin()" autocomplete="off">
+    <label>
+      NIA
+      <input type="text" [(ngModel)]="nia" name="nia" placeholder="NIA" required />
+    </label>
+
+    <label>
+      DNI/NIE
+      <input type="text" [(ngModel)]="nie" name="nie" placeholder="DNI/NIE" required />
+    </label>     
+    
+    <button type="submit">{{ 'LOGIN_CONTINUE' | translate }}</button>
+  </form>
+
+  @if (errorKey()) {
+    <div class="error-message">
+      {{ errorKey() | translate }}
+    </div>
+  }
+</div>

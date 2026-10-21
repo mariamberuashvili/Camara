@@ -1,0 +1,90 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 90%;           
+  max-width: 560px;
+  padding: 22px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fff;
+  
+  /* Centrado absoluto */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+
+
+h2 {
+  text-align: center;
+  font-size: 24px;      
+  overflow-wrap: break-word;
+  word-wrap: break-word; 
+}
+
+
+@media (max-width: 540px) {
+  .container {
+    padding: 16px;     
+  }
+  
+  h2 {
+    font-size: 20px;   
+    letter-spacing: -0.5px;
+  }
+}
+
+
+@media (max-width: 360px) {
+  h2 {
+    font-size: 4.1vw;
+  }
+}
+
+form {
+  display: grid;
+  gap: 14px;
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  font-weight: 600;
+}
+
+
+input[type='text'],
+input[type='date'] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  /* Esto evita que el padding empuje el borde hacia afuera */
+  box-sizing: border-box; 
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #000000;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #7b7d80;
+}
+
+.error {
+  color: #b00020;
+}

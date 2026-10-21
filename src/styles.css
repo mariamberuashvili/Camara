@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+/* src/styles.css */
+
+/* 2. La aplicamos a toda la aplicación */
+html, body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* O si quieres asegurarte de que afecte absolutamente a todo (inputs, botones, etc.) */
+*, input, button, select, textarea {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}

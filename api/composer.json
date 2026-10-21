@@ -1,0 +1,17 @@
+{
+    "name": "mariamberuashili/api",
+    "description": "camara",
+    "autoload": {
+        "psr-4": {
+            "Mariamberuashili\\Api\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mariamberuashvili"
+        }
+    ],
+    "require": {
+        "phpoffice/phpspreadsheet": "1.27"
+    }
+}

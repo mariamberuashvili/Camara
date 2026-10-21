@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>Importación masiva de alumnos</h2>
+
+  <input type="file"
+         (change)="onFileSelected($event)"
+         accept=".xlsx" />
+
+  <br><br>
+
+  <button (click)="uploadFile()" [disabled]="!selectedFile || uploading">
+    Subir Excel
+  </button>
+
+  <p *ngIf="uploading">Subiendo archivo...</p>
+</div>
